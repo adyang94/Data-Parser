@@ -14,12 +14,16 @@ function messageAndInputRetriever() {
   search = searchBar.value;
 }
 
-function resultRender(result) {
+function resultRender(name, value) {
   // Rendering results by creating an element and appending to parent.
   const resultCtn = document.createElement('div');
-  resultCtn.classList.add('segmentName');
+  resultCtn.classList.add('info');
 
-  resultCtn.innerHTML = `${result}`;
+  if (name) {
+    resultCtn.innerHTML = `${name}: ${value}`;
+  } else {
+    resultCtn.innerHTML = `${value}`;
+  }
 
   resultsCtn.appendChild(resultCtn);
 }
@@ -37,25 +41,36 @@ function messageParser() {
     // Comparing if segment name matches search string.
     if (search.toLowerCase() === section[0].toLowerCase()) {
       match = true;
-      resultRender(splitMessage[i]);
+      let name;
+      let value;
+      resultRender('', section[0]);
+
+      // Organizing the fields being sent to render.
+      section.slice(1).forEach((element) => {
+        name = element.slice(0, 3);
+        value = element.slice(3, element.length);
+        resultRender(name, value);
+      });
     } else {
       // This loop skips segment info and parses through the field info.
       for (let j = 1; j < section.length; j += 1) {
-        const fieldname = [];
+        let fieldname = [];
+        let fieldValue = [];
 
-        // In this loop, "fieldname" stores the first 3 letters of the field to compare to "search".
-        for (let k = 0; k < 3; k += 1) {
-          fieldname[k] = section[j][k];
-        }
-        if (fieldname.join('').toLowerCase() === search.toLowerCase()) {
+        // "Fieldname" stores the first 3 letters of the field to compare to "search".
+
+        fieldname = section[j].split('').splice(0, 3).join('');
+        fieldValue = section[j].split('').splice(3).join('');
+
+        if (fieldname.toLowerCase() === search.toLowerCase()) {
           match = true;
-          resultRender(section[j]);
+          resultRender(fieldname, fieldValue);
         }
       }
     }
   }
   if (match === false) {
-    resultRender('No result found.');
+    resultRender('', 'No result found.');
   }
 }
 
