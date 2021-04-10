@@ -4,8 +4,6 @@ Data Parsing
 
 Hi and thanks for taking the time to read my code.  This is my solution to the Data Parsing Code Homework.
 
-Assumptions:
-1x word search.
 
 Execution
 1) The site is hosted on firebase and can be accessed by going to this address:  https://data-parser-27a4b.web.app/
