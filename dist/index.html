@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="resetStyleSheet" href="reset.css">
+    <link rel="stylesheet" href="dataParsing.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Parser - Andrew Yang</title>
+  
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Welcome o Firebase Hosting</title>
+
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/8.3.3/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/8.3.3/firebase-auth.js"></script>
+    <script defer src="/__/firebase/8.3.3/firebase-database.js"></script>
+    <script defer src="/__/firebase/8.3.3/firebase-firestore.js"></script>
+    <script defer src="/__/firebase/8.3.3/firebase-functions.js"></script>
+    <script defer src="/__/firebase/8.3.3/firebase-messaging.js"></script>
+    <script defer src="/__/firebase/8.3.3/firebase-storage.js"></script>
+    <script defer src="/__/firebase/8.3.3/firebase-analytics.js"></script>
+    <script defer src="/__/firebase/8.3.3/firebase-remote-config.js"></script>
+    <script defer src="/__/firebase/8.3.3/firebase-performance.js"></script>
+    <!-- 
+      initialize the SDK after all desired features are loaded, set useEmulator to false
+      to avoid connecting the SDK to running emulators.
+    -->
+    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+
+
+
+<body>
+  <div class="banner">
+    <h1>Data Parser</h1>
+    <h4>Created by Andrew Yang</h4>
+  </div>
+  <form action="submit">
+    <div class="searchAndInput">
+      <div class="inputCtn">
+        
+        <textarea name="inputBar" id="inputBar" cols="30" rows="10" placeholder="Paste data here!"></textarea>
+      </div>
+
+      <div class="searchCtn">
+        <div class="searchbarCtn">
+          <input type="text" placeholder="Type search here!" id="searchBar">
+        </div>
+      </div>
+
+      <div class="goBtn">
+        <button type="submit">Go!</button>
+      </div>
+    </div>
+  </form>
+  
+  <div class="resultsCtn">
+    
+  </div>
+  <script src="./main.js"></script>
+</body>
+</html>
+
