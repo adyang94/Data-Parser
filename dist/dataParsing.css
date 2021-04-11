@@ -12,6 +12,7 @@
   height: 100vh;
   width: 100%;
   overflow:auto;
+  
 }
 h1 {
   margin: 0;
@@ -37,11 +38,27 @@ form {
   display: flex;
   justify-content: center;
 }
+.searchAndInput {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+.inputCtn {
+  margin-bottom: 20px;
+}
+.searchAndGoCtn {
+  display: flex ;
+  
+}
 .resultsCtn {
+  margin: 10px;
   border: 2px solid rgba(0, 0, 0, 0.219);
+  background-color:rgba(255, 255, 255, 0.747);
   color: rgba(0, 0, 0, 0.685);
   min-height: 100px;
   max-width: 90vw;
+  font-family: sans-serif;
 }
 .info {
   word-wrap: break-word;
