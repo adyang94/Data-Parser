@@ -1,11 +1,48 @@
 :root {
   width: 100vw;
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: cadetblue;
 }
-
+.body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100%;
+  overflow:auto;
+}
+h1 {
+  margin: 0;
+  padding: 0;
+  letter-spacing: 15px;
+}
+h4 {
+  border-top: 2px solid rgba(0, 0, 0, 0.26);
+  padding-top: 10px;
+  padding-bottom: 40px;
+  margin: 0;
+  display: inline-block;
+  width: 260px;
+  font-size: 12px;
+}
+.banner {
+  font-family: sans-serif;
+  color: rgb(240, 254, 255);
+  text-align: center; 
+}
+form {  
+  opacity: 75%;
+  display: flex;
+  justify-content: center;
+}
 .resultsCtn {
-  border: 2px solid black;
+  border: 2px solid rgba(0, 0, 0, 0.219);
+  color: rgba(0, 0, 0, 0.685);
   min-height: 100px;
-  overflow: auto;
-  max-width: 100vw;
+  max-width: 90vw;
+}
+.info {
+  word-wrap: break-word;
 }
